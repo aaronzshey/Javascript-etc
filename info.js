@@ -373,4 +373,33 @@ let remotelyDisable = obj2 => {
   obj2['disabled'] = true
 }
 remotelyDisable(spaceship) // permanently changes disabled to true.
-//Looping through functions
+/* Looping through functions
+
+
+Skipping to promises for now.  Come back to finish objects, classes, and others.
+
+
+
+
+
+*/
+
+//My first promise:
+const inventory = {
+  sunglasses: 1900,
+  pants: 1088,
+  bags: 1344
+};
+
+// Write your code below:
+const myExecutor = (resolve, reject) => {
+  if (inventory.sunglasses > 0) {
+    resolve("Sunglasses order processed.");
+  } else {
+    reject ("That item is sold out.");
+  }
+}
+
+const orderSunglasses = () => new Promise(myExecutor)
+let orderPromise = orderSunglasses()
+console.log(orderPromise)
