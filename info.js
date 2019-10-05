@@ -403,3 +403,8 @@ const myExecutor = (resolve, reject) => {
 const orderSunglasses = () => new Promise(myExecutor)
 let orderPromise = orderSunglasses()
 console.log(orderPromise)
+
+//setTimeout to delay functions
+const delay = () => {console.log("Carly Rae Jepsen is  awesome");
+};
+setTimeout(delay, 5000) //delays 5 seconds
