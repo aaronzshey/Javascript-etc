@@ -16,3 +16,12 @@ let remotelyDisable = obj2 => {
 greenEnergy(spaceship)
 remotelyDisable(spaceship)
 console.log(spaceship)
+
+let inventory = {
+  coal: 100,
+  cobblestone: 100,
+  diamond: 50,
+  netherrack: 15
+}
+
+let amount =
