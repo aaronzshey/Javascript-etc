@@ -408,3 +408,24 @@ console.log(orderPromise)
 const delay = () => {console.log("Carly Rae Jepsen is  awesome");
 };
 setTimeout(delay, 5000) //delays 5 seconds
+
+//Promises!
+const {checkInventory} = require('./library.js');
+
+const order = [['sunglasses', 1], ['bags', 2]];
+
+// Write your code below:
+const handleSuccess = (value) => {
+  console.log(value)
+}
+const handleFailure = (nextvalue) => {
+  console.log(nextvalue)
+}
+
+checkInventory(order)
+  .then(handleSuccess, handleFailure);
+
+//Refactoring with .catch notation
+checkInventory(order)
+  .then(handleSuccess) //Pass without invoke
+  .catch(handleFailure)
