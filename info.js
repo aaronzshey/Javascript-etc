@@ -409,6 +409,8 @@ const delay = () => {console.log("Carly Rae Jepsen is  awesome");
 };
 setTimeout(delay, 5000) //delays 5 seconds
 
+
+
 //Promises!
 const {checkInventory} = require('./library.js');
 
