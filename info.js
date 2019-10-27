@@ -417,10 +417,10 @@ const {checkInventory} = require('./library.js');
 const order = [['sunglasses', 1], ['bags', 2]];
 
 // Write your code below:
-const handleSuccess = (value) => {
+const handleSuccess = (value) => { //first argument
   console.log(value)
 }
-const handleFailure = (nextvalue) => {
+const handleFailure = (nextvalue) => { //second argument
   console.log(nextvalue)
 }
 
@@ -431,3 +431,24 @@ checkInventory(order)
 checkInventory(order)
   .then(handleSuccess) //Pass without invoke
   .catch(handleFailure)
+
+//Using promise.all
+const {checkAvailability} = require('./availability.js');
+
+const onFulfill = (itemsArray) => {
+  console.log(`Items checked: ${itemsArray}`);
+  console.log(`Every item was available from the distributor. Placing order now.`);
+};
+
+const onReject = (rejectionReason) => {
+	console.log(rejectionReason);
+};
+
+// Write your code below:
+const checkSunglasses = checkAvailability('sunglasses', 'Favorite Supply Co.')
+const checkPants = checkAvailability('pants', 'Favorite Supply Co.')
+const checkBags = checkAvailability('bags', 'Favorite Supply Co.')
+const promises = [checkSunglasses, checkPants, checkBags]
+Promise.all(promises)
+  .then(onFulfill)
+  .catch(onReject)
