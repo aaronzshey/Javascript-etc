@@ -15,4 +15,3 @@ const descendingOrder = n => {
   }
 };
 descendingOrder(123456789);
-a;
