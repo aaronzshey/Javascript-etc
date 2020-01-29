@@ -140,7 +140,9 @@ const plantNeedsWater = (day) => {
   } else {
     return false;
   }
-};//Arrays
+};
+
+//Arrays
 
 let myArray = ["Thing", "Object", "Et cetera", "So on"]
 //Arrays are zero-indexed - the first object is 0
