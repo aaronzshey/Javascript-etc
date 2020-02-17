@@ -10,6 +10,7 @@ axios
     //console.log(songTitle[0].children[0].data)
     const releaseDate = $("span.link-list__item__date");
     console.log(releaseDate[0].children[0].data)
+    
   })
   .catch(function(error) {
     console.log(error);
